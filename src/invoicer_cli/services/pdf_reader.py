@@ -35,5 +35,5 @@ def _read(path: Path) -> str | None:
             raise ValueError(
                 f"Expected a single-page PDF, but got {num_pages} pages: {path}"
             )
-        text = pdf.pages[0].extract_text() or None
+        text = pdf.pages[0].extract_text()
     return text
