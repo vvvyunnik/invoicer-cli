@@ -1,4 +1,4 @@
-from invoicer_cli.cli import app
+from cli import app
 
 
 def main() -> None:
