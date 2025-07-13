@@ -2,7 +2,7 @@ import asyncio
 
 import typer
 
-from config.settings import settings
+from invoicer_cli.config.settings import settings
 from invoicer_cli.services.extractor import Extractor
 
 app = typer.Typer(no_args_is_help=True)

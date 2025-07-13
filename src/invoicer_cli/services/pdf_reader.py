@@ -5,7 +5,7 @@ import pdfplumber
 
 class PdfReader:
     @staticmethod
-    async def read(file_path: str) -> str:
+    async def read(file_path: str) -> str | None:
         path = Path(file_path)
 
         if not path.exists():

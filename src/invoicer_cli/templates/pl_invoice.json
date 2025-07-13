@@ -2,11 +2,13 @@
    "fields":[
       {
          "name":"issue_date",
+         "type": "date",
          "pattern":"Data wystawienia:\\s*(\\d{2}-\\d{2}-\\d{4})"
       },
       {
          "name":"issuer",
-         "pattern":"Sprzedawca:\\s*(.+)"
+         "type": "str",
+         "pattern":"Sprzedawca:\\s*(.+?)(?=\\s+Nabywca:|$)"
       }
    ]
 }
