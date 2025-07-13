@@ -2,8 +2,8 @@ import asyncio
 
 import typer
 
-from config.settings import settings
-from services.pdf_reader import PdfReader
+from invoicer_cli.config.settings import settings
+from invoicer_cli.services.extractor import Extractor
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -15,8 +15,8 @@ def process():
 
 async def _process_async():
     try:
-        content = await PdfReader.read(settings.invoices_dir)
-        print(content)
+        extracted_pdf = await Extractor.extract(settings.invoices_dir)
+        print(extracted_pdf)
     except Exception as e:
         print(e)
 
